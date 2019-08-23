@@ -1,0 +1,39 @@
+body{
+    background-color:  #33cc33;   /setting the background color of body/ 
+}
+#bgimage{                      
+    width:600px;
+    height:9000px;
+    position: relative;
+    left: 400px;
+    background-image: url("../images/nbg.jpg");
+    z-index:1;
+    /*filter: blur(1px);
+    -webkit-filter: blur(1px);*/
+}
+
+#basket1{
+    width:100px;
+    height:100px;
+    position: absolute;
+    top:8900px;
+    left:250px; 
+    z-index:3;
+}
+#egg{
+    width:10px;
+    height: 10px;
+    position: absolute;
+    top:6px;
+    left:20px;
+    z-index:-2;
+}
+
+#basket2{
+    width:100px;
+    height:100px;
+    position: absolute;
+    top:8600px;
+    left:0px; 
+    z-index:3;
+}
