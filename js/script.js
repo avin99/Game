@@ -31,7 +31,7 @@
     }
 }*/
 var b3=0,b4=0;
-var ch=0,ch2=0;
+var ch=0,ch2=0,ch3=0;
 var b1=0,b2=0;
 var f5=0,f6=0;
 var ey=620;
@@ -112,7 +112,7 @@ basket3.src = "../images/basketgame.png";
           // if(ch==0)
         ey-=gravity;
        } 
-       else{
+       else if(f4==0){
         ch=1;
         ey+=gravity;
      }
@@ -123,7 +123,7 @@ basket3.src = "../images/basketgame.png";
             { ey=y1-gap;
              ex=x1+56;}
              f4=1;
-             f5=0;
+             
                   document.getElementById("canvas").onclick = function() {myFunction1()};
 
              function myFunction1() {
@@ -136,18 +136,33 @@ basket3.src = "../images/basketgame.png";
 
 
          if(b1==1){
-            if(b2==0 && ch2==0 && ey>0){
+            if(b2==0 && ch2==0){
          ey-=8;
             }
-            else{
+            else if(b2==0){
                 ch2=1;
                 ey+=8;
              }
          if(ey<=(y2-2*gap+30) && (ex>=x2-30 && ex<=x2+210)){
+             if(b3!=1){
             ey=y2-2*gap;
-            ex=x2+56;
+            ex=x2+56;}
             b2=1;
+            document.getElementById("canvas").onclick = function() {myFunction2()};
+
+             function myFunction2() {
+               b3=1;
+                }
          }
+         if(b3==1){
+            if(b4==0 && ch3==0 ){
+         ey-=8;
+            }
+            // else{
+            //     ch3=1;
+            //     ey+=8;
+            //  }
+            }
        }
        
        }
